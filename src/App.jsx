@@ -34,9 +34,10 @@ function App() {
 
   return (
     <Router>
+      <div className="App">
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/logn" element={<Login />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/forgot" element={<Forgot />} />
         <Route path="/otp" element={<OTPassword />} />
@@ -44,8 +45,8 @@ function App() {
 
         <Route path="*" element={<NotFound />} />
 
-        <Navbar />
-        <div className="App">
+        <Route element={<Navbar/>}>
+        
           {/* show nav from here */}
           <Route path="/set-balance" element={<SetBalance />} />
           <Route path="/budget" element={<Budget />} />
@@ -62,10 +63,12 @@ function App() {
           <Route path="/manage-goal" element={<ManageGoal />} />
           <Route path="/manage-payment" element={<ManagePayment />} />
           <Route path="/profile" element={<Profile />} />
+          
           {/* to here */}
-        </div>
-
+        
+        </Route>
       </Routes>
+      </div>
     </Router >
   )
 }
