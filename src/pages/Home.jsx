@@ -158,7 +158,7 @@ const Home = () => {
             </div>
             <div className="flex-1 mt-12 sm:max-w-lg lg:max-w-md">
               <form
-                target="_blank" action="https://formsubmit.co/curseofjedi@gmail.com" method="POST"
+                target="_blank" action="https://formsubmit.co/5e48a7337230ee54ae375b9191b49ccb" method="POST"
                 className="space-y-5"
               >
                 <div>
