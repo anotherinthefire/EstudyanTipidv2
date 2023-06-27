@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import logo from '../assets/EstudyanTipid-logo.png'
+import footerNavs from '../data/HomeNavs'
 
 const Menu = () => {
   const [state, setState] = useState(false)
@@ -10,14 +11,6 @@ const Menu = () => {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   };
-
-  const navigation = [
-    { title: "Home", path: "/" },
-    { title: "Features", path: "" },
-    { title: "FAQs", path: "" },
-    { title: "ContactUs", path: "" },
-    { title: "About", path: "" }
-  ]
 
   return (
     <nav className="bg-white border-b w-full md:sticky md:top-0 md:text-sm md:border-none">
@@ -51,11 +44,11 @@ const Menu = () => {
         <div className={`flex-1 pb-3 mt-8 md:block md:pb-0 md:mt-0 ${state ? 'block' : 'hidden'}`}>
           <ul className="justify-end items-center space-y-6 md:flex md:space-x-6 md:space-y-0">
             {
-              navigation.map((item, idx) => {
+              footerNavs.map((item, idx) => {
                 return (
                   <li key={idx} className="text-black hover:text-green-600">
-                    <Link to={item.path} className="block" onClick={() => handleClickScroll(item.title)}>
-                      {item.title}
+                    <Link to='' className="block" onClick={() => handleClickScroll(item.scroll)}>
+                      {item.name}
                     </Link>
                   </li>
                 )
