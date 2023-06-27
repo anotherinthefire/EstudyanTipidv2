@@ -13,7 +13,7 @@ const Menu = () => {
   };
 
   return (
-    <nav className="bg-white border-b w-full md:sticky md:top-0 md:text-sm md:border-none">
+    <nav className="bg-white border-b w-full md:sticky md:top-0 md:text-sm md:border-none z-50">
       <div className="items-center px-4 max-w-screen-xl mx-auto md:flex md:px-8">
         <div className="flex items-center justify-between md:block">
           <Link to="/" onClick={() => handleClickScroll('Home')}>
