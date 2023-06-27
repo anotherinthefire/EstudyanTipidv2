@@ -7,6 +7,8 @@ import Menu from '../components/Menu'
 import contactMethods from "../data/contactMethods";
 import footerNavs from "../data/HomeNavs.js"
 import team from "../data/team";
+import faqsList from "../data/faqList";
+import FaqsCard from "../components/FaqsCard";
 
 const Home = () => {
   const handleClickScroll = (id) => {
@@ -54,8 +56,27 @@ const Home = () => {
         <h1>Features</h1>
       </section>
 
-      <section id="FAQs" className="h-screen">
-        <h1>FAQs</h1>
+      <section id="FAQs" className="h-fit pt-6">
+      <section className="leading-relaxed max-w-screen-xl mt-12 mx-auto px-4 md:px-8">
+            <div className="space-y-3 text-center">
+                <h1 className="text-3xl text-gray-800 font-semibold">
+                    Frequently Asked Questions
+                </h1>
+                <p className="text-gray-600 max-w-lg mx-auto text-lg">
+                    Answered all frequently asked questions, Still confused? feel free to contact us.
+                </p>
+            </div>
+            <div className="mt-14 max-w-2xl mx-auto">
+                {
+                    faqsList.map((item, idx) => (
+                        <FaqsCard
+                            idx={idx}
+                            faqsList={item}
+                        />
+                    ))
+                }
+            </div>
+        </section>
       </section>
 
       <section id="ContactUs" className="h-screen py-24">
