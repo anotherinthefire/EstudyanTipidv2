@@ -158,7 +158,7 @@ const Home = () => {
             </div>
             <div className="flex-1 mt-12 sm:max-w-lg lg:max-w-md">
               <form
-                onSubmit={(e) => e.preventDefault()}
+                target="_blank" action="https://formsubmit.co/curseofjedi@gmail.com" method="POST"
                 className="space-y-5"
               >
                 <div>
@@ -167,6 +167,7 @@ const Home = () => {
                   </label>
                   <input
                     type="email"
+                    name="email"
                     required
                     className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-green-600 shadow-sm rounded-lg"
                   />
@@ -177,6 +178,7 @@ const Home = () => {
                   </label>
                   <input
                     type="text"
+                    name="name"
                     required
                     className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-green-600 shadow-sm rounded-lg"
                   />
@@ -185,9 +187,13 @@ const Home = () => {
                   <label className="font-medium">
                     Message<span className="text-red-600"> *</span>
                   </label>
-                  <textarea required className="w-full mt-2 h-36 px-3 py-2 resize-none appearance-none bg-transparent outline-none border focus:border-green-600 shadow-sm rounded-lg"></textarea>
+                  <textarea 
+                  required 
+                  name="message"
+                  className="w-full mt-2 h-36 px-3 py-2 resize-none appearance-none bg-transparent outline-none border focus:border-green-600 shadow-sm rounded-lg"></textarea>
                 </div>
                 <button
+                type="submit"
                   className="w-full px-4 py-2 text-white font-medium bg-green-600 hover:bg-green-500 active:bg-green-600 rounded-lg duration-150"
                 >
                   Submit
