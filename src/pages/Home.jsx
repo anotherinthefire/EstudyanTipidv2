@@ -128,7 +128,7 @@ const Home = () => {
         </section>
       </section>
 
-      <section id="ContactUs" className="h-screen py-24">
+      <section id="ContactUs" className="h-fit py-24 mb-14">
         <div className="max-w-screen-xl mx-auto px-4 text-gray-600 md:px-8">
           <div className="max-w-lg mx-auto gap-12 justify-between lg:flex lg:max-w-none">
             <div className="max-w-lg space-y-3">
@@ -204,7 +204,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section id="About" className="h-screen py-14">
+      <section id="About" className="h-fit py-14">
         <div className="max-w-screen-xl mx-auto px-4 md:px-8">
           <div className="max-w-xl">
             <h3 className="text-gray-800 text-3xl font-semibold sm:text-4xl">
