@@ -9,7 +9,9 @@ export default {
     colors: {
       'esgreen': '#51D289',
       'esblack': '#1E1E1E',
-      'white' : 'white'
+      'white' : 'white',
+      'green-500' : '#10B981',
+      'green-600' : '#059669'
     },
   },
   plugins: [],

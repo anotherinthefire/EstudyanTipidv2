@@ -63,7 +63,7 @@ const Menu = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/signup" className="block py-3 px-4 font-medium text-center text-white bg-green-600 hover:bg-green-500 active:bg-green-700 active:shadow-none rounded-lg shadow md:inline">
+                <Link to="/signup" className="block py-3 px-4 font-medium text-center text-white bg-green-500 hover:bg-green-600 active:shadow-none rounded-lg shadow md:inline">
                   Sign up
                 </Link>
               </li>
