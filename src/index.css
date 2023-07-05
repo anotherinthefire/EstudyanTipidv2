@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.roboto{
+    font-family: 'Roboto Mono', monospace;
+    }
+
+.monserat{
+    font-family: 'Montserrat', sans-serif;
+}
