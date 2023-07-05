@@ -1,5 +1,5 @@
 import {Link} from 'react-router-dom'
-import logo from '../assets/EstudyanTipid-logo (1).png'
+import logo from '../assets/EstudyanTipid-logo-d.png'
 
 const NotFound = () => {
   return (
