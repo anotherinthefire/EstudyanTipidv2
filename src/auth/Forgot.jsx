@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 const Forgot = () => {
   return (
     <div className="h-screen">
-      {/* login */}
       <div className="w-full space-y-6 text-esblack sm:max-w-md mx-auto pt-[10vh] relative z-20">
         <div className="bg-white shadow space-y-8 sm:p-6 sm:rounded-xl ">
           <form onSubmit={(e) => e.preventDefault()} className="px-4 py-6">
