@@ -16,14 +16,14 @@ const Forgot = () => {
                 <h1 className="text-4xl font-extrabold monserat pb-5">
                   Forgot Password?
                 </h1>
-                <span className="text-lg font-thin">Enter username or email associated with your account</span>
+                <span className="text-lg font-thin">Enter email associated with your account</span>
               </div>
             </div>
 
             <div className="flex items-center mb-6 p-2 border rounded-md bg-white">
               <input
                 type="email"
-                placeholder="email or username"
+                placeholder="user@gmail.com"
                 id="email"
                 className="w-full h-8 p-1 text-esblack outline-none bg-white"
               />
