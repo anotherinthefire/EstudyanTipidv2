@@ -1,5 +1,5 @@
 import human from "../assets/human.png";
-import logo from "../assets/Estudyantipid-logo-d.png";
+import logo from "../assets/logon.png";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -9,9 +9,9 @@ const Login = () => {
     <div className="h-screen">
 
       {/* login */}
-      <div className="w-full space-y-6 text-white sm:max-w-md mx-auto pt-20 relative z-20">
-        <div className="bg-esblack shadow space-y-8 sm:p-6 sm:rounded-lg">
-          <form onSubmit={(e) => e.preventDefault()} className="py-6 px-4">
+      <div className="w-full space-y-6 text-white sm:max-w-md mx-auto pt-[10vh] relative z-20">
+        <div className="bg-esblack shadow space-y-8 sm:p-6 sm:rounded-xl ">
+          <form onSubmit={(e) => e.preventDefault()} className="px-4 py-6">
 
             <div className="flex pb-8">
               <h1 className="text-6xl">|</h1>
@@ -24,23 +24,14 @@ const Login = () => {
             </div>
 
             <label htmlFor="email" className="block text-white">
-              Email
+              Email or Username
             </label>
-            <div className="flex items-center mb-6 p-2 border rounded-md bg-transparent">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="text-gray-400 w-7 h-7"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-              </svg>
+            <div className="flex items-center mb-6 p-2 border rounded-md bg-white">
               <input
                 type="email"
                 placeholder="user@gmail.com"
                 id="email"
-                className="w-full h-8 p-1 ml-3 text-gray-500 outline-none bg-esblack"
+                className="w-full h-8 p-1 text-esblack outline-none bg-white"
               />
             </div>
             <label className="text-gray-600 ">Password</label>
@@ -56,7 +47,7 @@ const Login = () => {
                     fill="none"
                     viewBox="0 0 24 24"
                     strokeWidth={1.5}
-                    stroke="currentColor"
+                    stroke="black"
                   >
                     <path
                       strokeLinecap="round"
@@ -75,7 +66,7 @@ const Login = () => {
                     fill="none"
                     viewBox="0 0 24 24"
                     strokeWidth={1.5}
-                    stroke="currentColor"
+                    stroke="black"
                     className="w-6 h-6"
                   >
                     <path
@@ -89,51 +80,58 @@ const Login = () => {
               <input
                 type={isPasswordHidden ? "password" : "text"}
                 placeholder="Enter your password"
-                className="w-full h-12 pr-24 pl-3 py-2 text-white bg-esblack outline-none border shadow-sm rounded-lg"
+                className="w-full h-12 pr-24 pl-3 py-2 text-esblack bg-white outline-none border shadow-sm rounded-lg"
               />
             </div>
-            <div className="text-right pb-8">
-          <Link to="/forgot" className="hover:text-indigo-600">
-            Forgot password?
-          </Link>
-        </div>
+            <div className="text-right pb-3">
+              <Link to="/forgot" className="hover:text-indigo-600">
+                Forgot password?
+              </Link>
+            </div>
             <button className="w-full px-4 py-2 mb-2 text-white font-medium bg-esgreen hover:bg-green-600 active:bg-indigo-600 rounded-lg duration-150">
               Sign in
             </button>
-            <div className="mt-5">
-                        <button className="w-full flex items-center justify-center gap-x-3 py-2.5 mt-5 border rounded-lg text-sm font-medium hover:bg-gray-50 duration-150 active:bg-gray-100">
-                            <svg className="w-5 h-5" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clipPath="url(#clip0_17_40)">
-                                    <path d="M47.532 24.5528C47.532 22.9214 47.3997 21.2811 47.1175 19.6761H24.48V28.9181H37.4434C36.9055 31.8988 35.177 34.5356 32.6461 36.2111V42.2078H40.3801C44.9217 38.0278 47.532 31.8547 47.532 24.5528Z" fill="#4285F4" />
-                                    <path d="M24.48 48.0016C30.9529 48.0016 36.4116 45.8764 40.3888 42.2078L32.6549 36.2111C30.5031 37.675 27.7252 38.5039 24.4888 38.5039C18.2275 38.5039 12.9187 34.2798 11.0139 28.6006H3.03296V34.7825C7.10718 42.8868 15.4056 48.0016 24.48 48.0016Z" fill="#34A853" />
-                                    <path d="M11.0051 28.6006C9.99973 25.6199 9.99973 22.3922 11.0051 19.4115V13.2296H3.03298C-0.371021 20.0112 -0.371021 28.0009 3.03298 34.7825L11.0051 28.6006Z" fill="#FBBC04" />
-                                    <path d="M24.48 9.49932C27.9016 9.44641 31.2086 10.7339 33.6866 13.0973L40.5387 6.24523C36.2 2.17101 30.4414 -0.068932 24.48 0.00161733C15.4055 0.00161733 7.10718 5.11644 3.03296 13.2296L11.005 19.4115C12.901 13.7235 18.2187 9.49932 24.48 9.49932Z" fill="#EA4335" />
-                                </g>
-                                <defs>
-                                    <clipPath id="clip0_17_40">
-                                        <rect width="48" height="48" fill="white" />
-                                    </clipPath>
-                                </defs>
-                            </svg>
-                            Continue with Google
-                        </button>
-                    </div>
-            <div className="text-center">
+
+            <div className="relative my-3">
+              <span className="block w-full h-px bg-white"></span>
+              <pre className="inline-block w-fit text-smpx-2 bg-esblack absolute -top-3 inset-x-0 mx-auto"> Or </pre>
+            </div>
+            <div className="">
+              <button className="w-full flex items-center justify-center gap-x-3 py-2.5 mt-5 border rounded-lg text-sm font-medium hover:bg-gray-50 duration-150 active:bg-gray-100">
+                <svg className="w-5 h-5" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clipPath="url(#clip0_17_40)">
+                    <path d="M47.532 24.5528C47.532 22.9214 47.3997 21.2811 47.1175 19.6761H24.48V28.9181H37.4434C36.9055 31.8988 35.177 34.5356 32.6461 36.2111V42.2078H40.3801C44.9217 38.0278 47.532 31.8547 47.532 24.5528Z" fill="#4285F4" />
+                    <path d="M24.48 48.0016C30.9529 48.0016 36.4116 45.8764 40.3888 42.2078L32.6549 36.2111C30.5031 37.675 27.7252 38.5039 24.4888 38.5039C18.2275 38.5039 12.9187 34.2798 11.0139 28.6006H3.03296V34.7825C7.10718 42.8868 15.4056 48.0016 24.48 48.0016Z" fill="#34A853" />
+                    <path d="M11.0051 28.6006C9.99973 25.6199 9.99973 22.3922 11.0051 19.4115V13.2296H3.03298C-0.371021 20.0112 -0.371021 28.0009 3.03298 34.7825L11.0051 28.6006Z" fill="#FBBC04" />
+                    <path d="M24.48 9.49932C27.9016 9.44641 31.2086 10.7339 33.6866 13.0973L40.5387 6.24523C36.2 2.17101 30.4414 -0.068932 24.48 0.00161733C15.4055 0.00161733 7.10718 5.11644 3.03296 13.2296L11.005 19.4115C12.901 13.7235 18.2187 9.49932 24.48 9.49932Z" fill="#EA4335" />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_17_40">
+                      <rect width="48" height="48" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+                Continue with Google
+              </button>
+            </div>
+            <div className="text-center pt-2">
               <p>Dont have account? <Link to="/signup" className="text-esgreen">Create a new account</Link>
-          </p>  
-        </div>
+              </p>
+            </div>
+            
           </form>
+          <Link to="/">{'<'}{'<'} back to home</Link>
         </div>
       </div>
 
-      {/* left */}
       <div className="flex">
+        {/* Left */}
         <div className="w-3/5">
-          <img src={human} className="absolute bottom-0 left- w-1/3" />
+          <img src={human} className="absolute bottom-0 left-0 h-[55vh]" />
         </div>
-        {/* right */}
-        <div className="w-2/5 bg-white flex items-center justify-center h-screen right-0 top-0 z-0 absolute">
-          <img src={logo} className="w-1/2" />
+        {/* Right */}
+        <div className="w-2/5 bg-white flex items-center justify-center h-screen absolute right-0 top-0 z-0">
+          <img src={logo} className="h-[55vh]" />
         </div>
       </div>
     </div>
