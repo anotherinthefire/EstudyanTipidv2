@@ -1,6 +1,6 @@
 const Budget = () => {
   return (
-    <div>Budget</div>
+    <div className="text-white">Budget</div>
   )
 }
 

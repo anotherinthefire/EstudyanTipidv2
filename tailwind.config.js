@@ -12,7 +12,8 @@ export default {
       'white' : 'white',
       'green-500' : '#10B981',
       'green-600' : '#059669',
-      'esred' : '#DC2625'
+      'esred' : '#DC2625',
+      'esyellow' : '#FFE600'
     },
   },
   plugins: [],
