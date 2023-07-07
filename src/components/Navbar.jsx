@@ -8,7 +8,7 @@ import { ReactComponent as Goals } from '../assets/svg/goals.svg';
 import { ReactComponent as Payment } from '../assets/svg/payment.svg';
 import { ReactComponent as Budget } from '../assets/svg/cash.svg';
 import { ReactComponent as Drop } from '../assets/svg/drop.svg';
-import { ReactComponent as Burger } from '../assets/svg/burger.svg';
+// import { ReactComponent as Burger } from '../assets/svg/burger.svg';
 import { ReactComponent as Logout } from '../assets/svg/logout.svg';
 import ultra from '../assets/profile/ultra.jfif'
 
@@ -21,17 +21,17 @@ const Navbar = () => {
     return (
         <div className="flex">
 
-            <div className={`bg-esblack h-screen p-5 text-white ${open ? "w-20" : "w-72"} duration-300 relative`}>
+            <div className={`bg-esblack h-screen p-5 text-white overflow-y-scroll no-scrollbar ${open ? "w-20" : "w-72"} duration-300 relative`}>
 
-                {/* burger */}
-                <Burger
+                {/* <Burger
                     className="w-8 h-8 absolute -right-11 cursor-pointer"
                     onClick={() => setOpen(!open)}
-                />
+                /> */}
+
                 <Link to="/wallet">
                     {/* logo */}
-                    <div className="inline-flex">
-                        <img src={logo} className={`cursor-pointer block float-left h-8 w-8 duration-500 ${!open ? "rotate-[360deg]" : "rotate-[360deg"}`} />
+                    <div className="inline-flex" >
+                        <img src={logo} onClick={() => setOpen(!open)} className={`cursor-pointer block float-left h-8 w-8 duration-500 ${!open ? "rotate-[360deg]" : "rotate-[360deg"}`} />
                         <h1 className={`origin-left text-2xl pl-2 font-bold duration-300 ${!open ? "scale-100" : "scale-0"}`}>Estudyan<span className="text-esgreen">Tipid</span></h1>
                     </div>
                 </Link>
@@ -146,15 +146,17 @@ const Navbar = () => {
                     <span className="block w-full h-px bg-white my-3"></span>
 
                     <li className={`flex items-center gap-x-4 cursor-pointer rounded-lg p-2 hover:bg-esyellow hover:text-esblack mt-2`}>
-                        <span className="block float-left rotate-180">
-                            <Logout />
-                        </span>
-                        <span className={`text-base font-medium flex-1 duration-300 ${!open ? "scale-100" : "scale-0"}`}>Logout</span>
+                        <Link to="/" className="flex items-center flex-1">
+                            <span className="pr-4">
+                                <Logout />
+                            </span>
+                            <span className={`text-base font-medium duration-300 ${!open ? "scale-100" : "scale-0"}`}>Logout</span>
+                        </Link>
                     </li>
                 </ul>
 
             </div>
-            <div className="overflow-y-scroll h-screen">
+            <div className="overflow-y-scroll no-scrollbar h-screen">
                 <Outlet />
             </div>
         </div>
