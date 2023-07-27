@@ -9,8 +9,9 @@ const Login = () => {
     <div className="h-screen">
 
       {/* login */}
-      <div className="w-full space-y-6 text-white sm:max-w-md mx-auto pt-[10vh] relative z-20">
-        <div className="bg-esblack shadow space-y-8 sm:p-6 sm:rounded-xl ">
+      <div className="mx-3 sm:mx-0">
+      <div className="w-full space-y-6 text-white sm:max-w-md pt-[6vh] sm:pt-[10vh] relative z-20  sm:mx-auto">
+        <div className="bg-esblack shadow space-y-8 p-3 sm:p-6 rounded-xl">
           <form onSubmit={(e) => e.preventDefault()} className="px-4 py-6">
 
             <div className="flex pb-8">
@@ -88,9 +89,12 @@ const Login = () => {
                 Forgot password?
               </Link>
             </div>
-            <button className="w-full px-4 py-2 mb-2 text-white font-medium bg-esgreen hover:bg-green-600 active:bg-indigo-600 rounded-lg duration-150">
+            <Link to='/wallet'>
+              <button className="w-full px-4 py-2 mb-2 text-white font-medium bg-esgreen hover:bg-green-600 active:bg-indigo-600 rounded-lg duration-150">
               Sign in
             </button>
+            </Link>
+            
 
             <div className="relative my-3">
               <span className="block w-full h-px bg-white"></span>
@@ -122,6 +126,7 @@ const Login = () => {
           </form>
           <Link to="/">{'<'}{'<'} back to home</Link>
         </div>
+      </div>
       </div>
 
       <div className="flex">

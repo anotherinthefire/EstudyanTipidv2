@@ -10,7 +10,7 @@ import { ReactComponent as Budget } from '../assets/svg/cash.svg';
 import { ReactComponent as Drop } from '../assets/svg/drop.svg';
 // import { ReactComponent as Burger } from '../assets/svg/burger.svg';
 import { ReactComponent as Logout } from '../assets/svg/logout.svg';
-import ultra from '../assets/profile/ultra.jfif'
+import user from "../data/user";
 
 const Navbar = () => {
     const [open, setOpen] = useState(true)
@@ -28,23 +28,25 @@ const Navbar = () => {
                     onClick={() => setOpen(!open)}
                 /> */}
 
-                <Link to="/wallet">
-                    {/* logo */}
-                    <div className="inline-flex" >
-                        <img src={logo} onClick={() => setOpen(!open)} className={`cursor-pointer block float-left h-8 w-8 duration-500 ${!open ? "rotate-[360deg]" : "rotate-[360deg"}`} />
+
+                {/* logo */}
+                <div className="inline-flex" >
+                    <img src={logo} onClick={() => setOpen(!open)} className={`cursor-pointer block float-left h-8 w-8 duration-500 ${!open ? "rotate-[360deg]" : "rotate-[360deg"}`} />
+                    <Link to="/wallet">
                         <h1 className={`origin-left text-2xl pl-2 font-bold duration-300 ${!open ? "scale-100" : "scale-0"}`}>Estudyan<span className="text-esgreen">Tipid</span></h1>
-                    </div>
-                </Link>
+                    </Link>
+                </div>
+
                 <div>
                 </div>
 
                 <Link to="/profile">
                     <div className="flex flex-col items-center mt-6 hover:text-esyellow">
                         <div className={`hover:bg-esyellow  p-1 ${!open ? "rounded-full" : "rounded-lg"}`}>
-                            <img className={`object-cover rounded-full duration-300 ${!open ? "w-24 h-24" : "w-10 h-10 rounded-lg"}`} src={ultra} alt="avatar" />
+                            <img className={`object-cover rounded-full duration-300 ${!open ? "w-24 h-24" : "w-10 h-10 rounded-lg"}`} src={user[0].image} alt="avatar" />
                         </div>
-                        <h4 className={`mx-2 mt-2 font-medium text-gray-800 dark:text-gray-200 duration-300  ${!open ? "scale-100" : "scale-0"}`}>Ron Ultra</h4>
-                        <p className={`mx-2 mt-1 text-sm font-medium text-gray-600 dark:text-gray-400 duration-300 ${!open ? "scale-100" : "scale-0"}`}>rongodfreyultra@gmail.com</p>
+                        <h4 className={`mx-2 mt-2 font-medium text-gray-800 dark:text-gray-200 duration-300  ${!open ? "scale-100" : "scale-0"}`}>{user[0].username}</h4>
+                        <p className={`mx-2 mt-1 text-sm font-medium text-gray-600 dark:text-gray-400 duration-300 ${!open ? "scale-100" : "scale-0"}`}>{user[0].email}</p>
                     </div>
                 </Link>
 
@@ -156,7 +158,7 @@ const Navbar = () => {
                 </ul>
 
             </div>
-            <div className="overflow-y-scroll no-scrollbar h-screen">
+            <div className="overflow-y-scroll no-scrollbar h-screen w-full">
                 <Outlet />
             </div>
         </div>
